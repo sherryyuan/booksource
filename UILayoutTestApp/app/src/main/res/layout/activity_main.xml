@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_gravity="right|top"
+        android:text="Button 1"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_gravity="left|top"
+        android:text="Button 2"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_gravity="left|bottom"
+        android:text="Button 3"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_gravity="right|bottom"
+        android:text="Button 4"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="50%" />
+
+
+</android.support.percent.PercentFrameLayout>
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--&gt;--><!--<Button--><!--android:id="@+id/button1"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_alignParentLeft="true"--><!--android:layout_alignParentTop="true"--><!--android:text="Button 1"/>-->
+
+    <!--<Button--><!--android:id="@+id/button2"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_alignParentRight="true"--><!--android:layout_alignParentTop="true"--><!--android:text="Button 2"/>-->
+
+    <!--<Button--><!--android:id="@+id/button3"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_centerInParent="true"--><!--android:text="Button 3"/>-->
+
+    <!--<Button--><!--android:id="@+id/button4"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_toLeftOf="@id/button1"--><!--android:layout_below="@id/button2"--><!--android:text="Button 4"/>-->
+
+    <!--<Button--><!--android:id="@+id/button5"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_alignParentBottom="true"--><!--android:layout_alignParentRight="true"--><!--android:text="Button 5"/>--><!--</RelativeLayout>-->
+
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:orientation="horizontal"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--tools:context="com.example.liyuanma.uilayouttestapp.MainActivity">-->
+
+    <!--<EditText--><!--android:id="@+id/editText_1"--><!--android:layout_width="0dp"--><!--android:layout_height="wrap_content"--><!--android:layout_weight="2"--><!--android:hint="type Something"/>--><!--<Button--><!--android:id="@+id/button_1"--><!--android:layout_width="0dp"--><!--android:layout_height="wrap_content"--><!--android:layout_gravity="top"--><!--android:layout_weight="1"-->
+
+    <!--android:text="Button 1"/>-->
+
+    <!--&lt;!&ndash;<Button&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/button_2"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_gravity="center_vertical"&ndash;&gt;--><!--&lt;!&ndash;android:text="Button 2"/>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<Button&ndash;&gt;--><!--&lt;!&ndash;android:id="@+id/button_3"&ndash;&gt;--><!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;--><!--&lt;!&ndash;android:layout_gravity="bottom"&ndash;&gt;--><!--&lt;!&ndash;android:text="Button 3"/>&ndash;&gt;-->
+
+
+    <!--</LinearLayout>-->
