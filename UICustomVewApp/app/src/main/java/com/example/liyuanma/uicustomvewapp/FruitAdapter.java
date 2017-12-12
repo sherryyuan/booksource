@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.liyuanma.uicustomvewapp.layout.Fruit;
 
@@ -30,11 +28,20 @@ public class FruitAdapter extends ArrayAdapter<Fruit> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         Fruit fruit = getItem(position);//get current fruit item
-        View view = LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
-        ImageView imageView = view.findViewById(R.id.fruit_image);
-        TextView textView = view.findViewById(R.id.fruit_name);
-        imageView.setImageResource(fruit.getImageId());
-        textView.setText(fruit.getName());
+        View view;
+        ViewHolder viewHolder;
+        if (convertView == null) {
+            view = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
+            viewHolder = new ViewHolder();
+            viewHolder.fruitImage = view.findViewById(R.id.fruit_image);
+            viewHolder.fruitName = view.findViewById(R.id.fruit_name);
+            view.setTag(viewHolder);
+        } else {
+            view = convertView;
+            viewHolder = (ViewHolder) convertView.getTag();
+        }
+        viewHolder.fruitImage.setImageResource(fruit.getImageId());
+        viewHolder.fruitName.setText(fruit.getName());
         return view;
     }
 }

@@ -2,7 +2,10 @@ package com.example.liyuanma.uicustomvewapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.liyuanma.uicustomvewapp.layout.Fruit;
 
@@ -14,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
             {"Apple", "Banana", "Orange", "Watermelon", "Pear", "Grape", "Pineapple", "Strawberry",
                     "Cherry", "Mango", "Apple", "Banana", "Orange", "Watermelon", "Pear", "Grape",
                     "Pineapple", "Strawberry", "Cherry", "Mango"};
-    private ArrayList<Fruit> fruitList;
+    private ArrayList<Fruit> fruitList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
         FruitAdapter adapter = new FruitAdapter(MainActivity.this, R.layout.fruit_itme, fruitList);
         ListView listView = findViewById(R.id.list_view);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Fruit fruit = fruitList.get(position);
+                Toast.makeText(MainActivity.this, fruit.getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
 //        ArrayAdapter<String> adapter = new ArrayAdapter<>(
 //                MainActivity.this, android.R.layout.simple_list_item_1, data);
 //        ListView listView = findViewById(R.id.list_view);
